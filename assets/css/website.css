@@ -1,0 +1,210 @@
+body {
+  margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px; 
+}
+
+div.cabecalho {
+	font-weight: Bold;
+	font-size: 14px; 
+	background-color: #86CAA1;
+	Color: #FFFFFF;
+	text-align: left;
+	padding: 2px 2px 2px 2px;
+}
+div.cadastro {
+	text-align: left;
+	background-color: #F2F2F2;
+	line-height: 200%;
+	vertical-align: top;
+	padding: 2px 4px 2px 4px;
+    border: 1px solid;
+    border-color: #86CAA1 #86CAA1 #86CAA1 #86CAA1;
+	margin-bottom: 4px;
+}
+div.andamento_par {
+	text-align: left;
+	background-color: #F2F2F2;
+	line-height: 130%;
+	vertical-align: top;
+	padding: 2px 4px 2px 4px;
+    border: 1px solid;
+    border-color: #F2F2F2 #F2F2F2 #86CAA1 #F2F2F2;
+	margin-bottom: 6px;
+}
+div.andamento_impar {
+	text-align: left;
+	background-color: #FFFFFF;
+	line-height: 130%;
+	vertical-align: top;
+	padding: 2px 4px 2px 4px;
+    border: 1px solid;
+    border-color: #FFFFFF #FFFFFF #86CAA1 #FFFFFF;
+	margin-bottom: 6px;
+}
+
+/* Keramik Style */
+div.keramik_menuBar {
+    padding: 2px 4px 0 4px;
+}
+div.keramik_subMenuBar {
+    background: url(imagens/keramik_gradient_h.gif) repeat-y;
+    border: 1px solid;
+    border-color: #FFFFFF #535352 #535352 #FFFFFF;
+}
+div.keramik_menuElement, div.keramik_subMenuElement {
+    border: 0;
+    color: #535352;
+    font-family: serif; 
+    font-size: 12px;
+    line-height: 14px;
+    text-align: left;
+    padding: 3px 5px;
+}
+div.keramik_subMenuElement {
+    padding: 3px 3px 3px 13px;
+}
+div.keramik_menuElementHover {
+    padding: 2px 4px;
+    border: 1px solid;
+    border-color: #535352 #FFFFFF #FFFFFF #535352;
+    background-color: #FFFFFF;
+}
+div.keramik_subMenuElementHover {
+    padding: 2px 2px 2px 12px;
+    border: 1px solid;
+    border-color: #82A0C2;
+    background: url(imagens/keramik_bubble.gif) repeat-x;
+}
+div.domMenu_subMenuElementHeading {
+    font-weight: bold;
+}
+
+table {
+	font-weight: 200;
+	font-size: 12px; 
+	padding: 0px 0px 0px 0px;
+/*	border-spacing: 0px;*/
+	border: 0px none #86CAA1;
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: left;
+}
+
+table.mytable {
+	background-color: #F2F2F2;
+	border-spacing: 0px;
+    border: 1px solid;
+    border-color: #86CAA1 #86CAA1 #86CAA1 #86CAA1;
+}
+table.mytable th {
+	font-weight: Bold;
+	font-size: 14px; 
+	background-color: #86CAA1;
+	color: #FFFFFF;
+}
+table.mytable tr.impar {
+	background-color: #EEEEEE; 
+	color: #313131;
+}
+table.mytable tr.par {
+	color: #313131;
+	background-color: #FFFFFF; 
+}
+table.mytable tr.impar1 {
+	background-color: #D8FAE2; 
+	color: #313131;
+}
+table.mytable tr.par1 {
+	color: #313131;
+	background-color: #FFFFFF; 
+}
+label.aviso{
+Color: #EA4022;
+font-weight: bold;
+}
+label.cadastro_80px{
+float: left;
+width: 80px;
+font-weight: bold;
+}
+label.cadastro{
+float: left;
+width: 180px;
+font-weight: bold;
+}
+label.novo_cadastro{
+float: left;
+width: 300px;
+font-weight: bold;
+}
+label.cadastro_longo{
+float: left;
+width: 280px;
+font-weight: bold;
+}
+input, textarea, select{
+/*width: 380px;*/
+margin-bottom: 4px;
+}
+br{
+clear: left;
+}
+
+a:link {
+	color: #008000;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #008000;
+}
+a:hover {
+	text-decoration: underline;
+	color: #008000;
+}
+a:active {
+	text-decoration: none;
+	color: #666666;
+}
+
+/*Estilo do principal / sistemas antigos*/
+.style1 {font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 16px;
+	color: #008000;
+}
+.style6 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; }
+.style3 {font-size: 12px}
+body.principal {
+	margin-left: 2px;
+	margin-top: 4px;
+}
+.style11 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #008000;
+}
+/*Fim do estilo do principal/ sistemas antigos*/
+
+<style type="text/css">
+
+  .clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    }
+
+</style><!-- main stylesheet ends, CC with new stylesheet below... -->
+
+<!--[if IE]>
+<style type="text/css">
+  .clearfix {
+    zoom: 1;     /* triggers hasLayout */
+    }  /* Only IE can see inside the conditional comment
+    and read this CSS rule. Don't ever use a normal HTML
+    comment inside the CC or it will close prematurely. */
+</style>
+<![endif]-->
