@@ -99,7 +99,7 @@ function valida()
 					<!-- Aqui começa o cadastro dos dados. a parte de cima do html é padrão de todos os sistemas -->
 						<?php echo Form::open('index.php/edital/save', array('enctype' => 'multipart/form-data'), array('submit'=>'return valida();')); ?>
 							<?php //echo "Novo: ".$edital->nr_edital; ?>
-							<?php echo Form::hidden('editando', empty($kohana_view_data['editar']) ? null : $kohana_view_data['editar']->menu_id); ?>
+							<?php echo Form::hidden('editando', empty($kohana_view_data['cd_edital']) ? null : $kohana_view_data['cd_edital']); ?>
 							<?php echo Form::hidden('edital_antigo', empty($kohana_view_data['editar']) ? null : $kohana_view_data['editar']->menu_id); ?>
 							<?php echo Form::hidden('proposta_antigo', empty($kohana_view_data['editar']) ? null : $kohana_view_data['editar']->menu_id); ?>
 							<div class='cabecalho'>
@@ -120,15 +120,17 @@ function valida()
 									<?php echo Form::input('hr_abertura', empty($kohana_view_data['hr_abertura']) ? null : $kohana_view_data['hr_abertura'], array('required' => 'true','class' => 'formattime', 'size' =>'16', 'maxlength' => '5')); ?> hh:mm<br>
 								<!--<label class='cadastro'>Entidades: </label>-->
 									<?php echo form::label('cd_entidade', '* Entidade:'); ?>
-								    <?php echo Form::select('cd_entidade', ORM::factory('entidades')->order_by('nm_entidade')->find_all()->as_array('cd_entidade','nm_entidade'), /*Arr::get($post, 'entidades'),*/ array('style' => 'width: 220px;', 'class' => 'form_contato')); ?><br>
+								    <?php echo Form::select('cd_entidade', ORM::factory('entidades', empty($kohana_view_data['cd_entidade']) ? null : $kohana_view_data['cd_entidade'])->order_by('nm_entidade')->find_all()->as_array('cd_entidade','nm_entidade'), /*Arr::get($post, 'entidades'),*/ array('style' => 'width: 220px;', 'class' => 'form_contato')); ?><br>
 								<!--<label class='cadastro'>Modalidades: </label>-->
 									<?php echo form::label('cd_modalidade', '* Modalidade:'); ?>
-								    <?php echo Form::select('modalidades', ORM::factory('modalidades')->order_by('nm_modalidade')->find_all()->as_array('cd_modalidade','nm_modalidade'), /*Arr::get($post, 'entidades'),*/ array('style' => 'width: 220px;', 'class' => 'form_contato')); ?><br>
+								    <?php echo Form::select('modalidades', ORM::factory('modalidades', empty($kohana_view_data['cd_modalidade']) ? null : $kohana_view_data['cd_modalidade'])->order_by('nm_modalidade')->find_all()->as_array('cd_modalidade','nm_modalidade'), /*Arr::get($post, 'entidades'),*/ array('style' => 'width: 220px;', 'class' => 'form_contato')); ?><br>
 								<label class='cadastro'>Objeto: </label><textarea name="ds_objeto" cols="45" rows="20" id="ds_objeto"><?php if (isset ($ds_objeto)) {echo $ds_objeto;} ?></textarea><br><!--Quantidade restante de caracteres <div id="Qtd">4000</div>-->
-									<?php echo form::label('nm_edital', 'Selecione o arquivo do Edital em seu computador para realizar o envio:'); ?><br /> <?php echo form::input('nm_edital', '', array('id' => 'nm_edital', 'type' => 'file', 'class' => 'form_contato', 'size' =>'50', 'maxlength' => '2000')); ?> <br>
-									<?php echo form::label('nm_proposta', 'Selecione o arquivo do Edital em seu computador para realizar o envio:'); ?><br /> <?php echo form::input('nm_proposta', '', array('id' => 'nm_proposta', 'type' => 'file', 'class' => 'form_contato', 'size' =>'50', 'maxlength' => '2000')); ?> <br>
+									<?php echo form::label('nm_edital', 'Selecione o arquivo do Edital em seu computador para realizar o envio:'); ?><br /> 
+										<?php echo form::input('nm_edital', '', array('id' => 'nm_edital', 'type' => 'file', 'class' => 'form_contato', 'size' =>'50', 'maxlength' => '2000')); ?> <br>
+									<?php echo form::label('nm_proposta', 'Selecione o arquivo do Edital em seu computador para realizar o envio:'); ?><br /> 
+										<?php echo form::input('nm_proposta', '', array('id' => 'nm_proposta', 'type' => 'file', 'class' => 'form_contato', 'size' =>'50', 'maxlength' => '2000')); ?> <br>
 								<label class='cadastro'>Data Publicação Inicial: </label>
-									<?php echo Form::input('dt_inicio', empty($kohana_view_data['editar']) ? null : $kohana_view_data['editar']->descricao, array('required' => 'true','class' => 'formatdate', 'size' =>'20', 'maxlength' => '10')); ?> dd/mm/aaaa<br>
+									<?php echo Form::input('dt_inicio', empty($kohana_view_data['dt_inicio']) ? null : $kohana_view_data['dt_inicio'], array('required' => 'true','class' => 'formatdate', 'size' =>'20', 'maxlength' => '10')); ?> dd/mm/aaaa<br>
 									<?php echo Form::hidden('st_edital_pago', 'N'); ?>
 									<?php echo Form::hidden('cd_etapa', '1'); ?>
 									<br>

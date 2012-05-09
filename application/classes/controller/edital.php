@@ -98,18 +98,18 @@ class Controller_Edital extends Controller_Template_Website {
                
                 //Seleciona um objeto Post através do ORM,
                 //se nao existir id trás um objeto em branco          
-                $post = ORM::Factory('editais', $_POST['nr_edital']);
-               
+                $post = ORM::Factory('editais', $_POST['editando'])->values($_POST)->save();
+               //, $post['id'])->values($post)->save();
                 //Remove a chave id, do POST,
                 //do contrario ele tentara alterar este campo
-                unset($_POST['id']);
+                //unset($_POST['id']);
                
                 //seta os valores do objeto com
                 //os valores passados pelo $_POST
-                $post->values($_POST);
+                //$post->values($_POST);
                
                 //sava os dados do objeto
-                $post->save();
+                //$post->save();
                
                 //redireciona para o controller blog
                 $this->request->redirect('edital/list');
